@@ -27,8 +27,8 @@
             </ul>
             {% if not request.user.is_authenticated %}
                 <div>
-                    <a href="#" class="btn btn-outline-success" style="width: 150px">Login</a>
-                    <a href="#" type="button" class="btn btn-success" style="width: 150px">Register</a>
+                    <a href="{% url 'user_login' %}" class="btn btn-outline-success" style="width: 150px">Login</a>
+                    <a href="{% url 'user_registration' %}" type="button" class="btn btn-success" style="width: 150px">Register</a>
                 </div>
             {% else %}
                 <div class="dropdown show">
@@ -47,8 +47,8 @@
                         {% endif %}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarProfileDropdown">
-                        <a class="dropdown-item" href="#">My Profile</a>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="{% url 'user_profile' %}">My Profile</a>
+                        <a class="dropdown-item" href="{% url 'user_logout' %}">Logout</a>
                     </div>
                 </div>
 
